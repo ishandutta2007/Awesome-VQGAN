@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#3a7bd5"/>
+    </linearGradient>
+    <linearGradient id="accentGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f857a6"/>
+      <stop offset="100%" style="stop-color:#ff5858"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00d2ff;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bgGrad)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+
+  <!-- Glow effects -->
+  <ellipse cx="200" cy="150" rx="300" ry="150" fill="url(#glowGrad)" opacity="0.4"/>
+  <ellipse cx="1000" cy="150" rx="250" ry="150" fill="url(#glowGrad)" opacity="0.3"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="60" r="30" fill="none" stroke="url(#accentGrad)" stroke-width="1" opacity="0.15"/>
+  <circle cx="1100" cy="240" r="50" fill="none" stroke="url(#accentGrad2)" stroke-width="1" opacity="0.15"/>
+  <circle cx="1050" cy="50" r="20" fill="none" stroke="#00d2ff" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="150" cy="250" r="15" fill="none" stroke="#f857a6" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Decorative line top -->
+  <line x1="50" y1="30" x2="1150" y2="30" stroke="url(#accentGrad)" stroke-width="1" opacity="0.3"/>
+
+  <!-- Neural network pattern lines -->
+  <g opacity="0.08" stroke="#00d2ff" stroke-width="0.8">
+    <line x1="300" y1="80" x2="350" y2="150"/>
+    <line x1="300" y1="80" x2="400" y2="100"/>
+    <line x1="350" y1="150" x2="400" y2="100"/>
+    <line x1="350" y1="150" x2="420" y2="180"/>
+    <line x1="400" y1="100" x2="420" y2="180"/>
+    <circle cx="300" cy="80" r="3" fill="#00d2ff"/>
+    <circle cx="350" cy="150" r="3" fill="#00d2ff"/>
+    <circle cx="400" cy="100" r="3" fill="#00d2ff"/>
+    <circle cx="420" cy="180" r="3" fill="#00d2ff"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="115" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="800" fill="#ffffff" filter="url(#shadow)">
+    <tspan fill="url(#accentGrad)">Awesome</tspan>
+    <tspan fill="#ffffff">-VQGAN</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="160" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#b0b0d0" letter-spacing="1">
+    Vector Quantized Generative Adversarial Networks
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="195" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="300" fill="#8888aa" letter-spacing="2">
+    Evolution · Variants · Applications
+  </text>
+
+  <!-- Code-like box -->
+  <rect x="380" y="215" rx="6" ry="6" width="440" height="35" fill="#1a1a2e" stroke="url(#accentGrad)" stroke-width="0.5" opacity="0.8"/>
+  <text x="410" y="238" font-family="'Courier New', monospace" font-size="13" fill="#66d9ef">
+    <tspan fill="#f92672">import</tspan>
+    <tspan fill="#a6e22e"> VQGAN</tspan>
+    <tspan fill="#f8f8f2"> from</tspan>
+    <tspan fill="#e6db74"> "awesome-vqgan"</tspan>
+  </text>
+
+  <!-- Version badge -->
+  <rect x="540" y="260" rx="10" ry="10" width="120" height="22" fill="#3a7bd5" opacity="0.8"/>
+  <text x="600" y="276" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">
+    ★ STAR ON GITHUB ★
+  </text>
+
+  <!-- Decorative line bottom -->
+  <line x1="50" y1="270" x2="1150" y2="270" stroke="url(#accentGrad2)" stroke-width="1" opacity="0.3"/>
+
+  <!-- Bottom-right decorative elements -->
+  <g opacity="0.06">
+    <rect x="1050" y="230" width="100" height="50" rx="4" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <text x="1100" y="258" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff">VQGAN</text>
+  </g>
+  <g opacity="0.06">
+    <rect x="50" y="50" width="100" height="50" rx="4" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <text x="100" y="78" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffffff">TOKEN</text>
+  </g>
+</svg>
