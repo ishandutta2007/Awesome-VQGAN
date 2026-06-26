@@ -10,7 +10,10 @@ A Vector Quantized Generative Adversarial Network (VQGAN) is a foundational deep
 The technical progression of discrete visual tokenization has transitioned from raw pixel autoencoders to adversarial codebooks, moving toward unified token spaces for modern multi-modal foundation models.
 
 ```mermaid
-[VQ-VAE (van den Oord, 2017)] ----> [VQGAN (Esser et al., 2021)] ----> [ViT-VQGAN / Tokenizer Foundational Shift](Lacked High-Frequency Realism)       (Adversarial Perceptual Loss)       (Vision Transformer Core / Multi-Modal LLMs)
+flowchart LR
+    A["VQ-VAE (van den Oord, 2017)<br/>(Lacked High-Frequency Realism)"]
+    --> B["VQGAN (Esser et al., 2021)<br/>(Adversarial Perceptual Loss)"]
+    --> C["ViT-VQGAN / Tokenizer Foundational Shift<br/>(Vision Transformer Core / Multi-Modal LLMs)"]
 ```
 
 *   **The Discrete Foundation Era (VQ-VAE, 2017)**
